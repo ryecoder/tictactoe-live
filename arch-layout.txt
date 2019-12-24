@@ -1,0 +1,43 @@
+Module for 1 need item
+Factories for multiple need items
+
+## Gameboard Manager (UI) (Module)
+- update Gameboard UI per click of user
+-> check current player with Game Manager
+--> update UI based on current player marker
+---> Game Manager updates current players selection, checks winning player & switches players
+
+- update Scoreboard UI
+- update winner banner UI
+
+- reset the game board 
+-> Game Manager reset all players selections
+
+- reset everything in UI (via button); winner banner, score board
+-> Game Manager reset everything in core
+
+## Game Manager (Core) (Module)
+
+- create 2 players assign x and o
+
+- monitors player turns
+-- switches players, first player always x
+
+- save player's selections to player
+
+- checks for a winner
+-> will check for winning combinations in players currently selected items
+--- winning combinations []
+--- [1,2,3] [4,5,6] [7,8,9] [1,4,7] [2,5,8] [3,5,9] [1,5,9] [3,5,7]
+--> after that will also check if a player selected items equal 5 then declare draw
+---> if winning combination is found, update game stats & clear players selections, Call Gameboard Manager to update winnner banner, update score board
+---> if draw, one player has 5 selected items, update game stats & clear players selections, Call Gameboard manager to update winner banner, update score board
+
+- records game stats
+-- stats: x score, o score, draw
+- resets everything in Core; game stats, players selections
+
+## Player (Factory)
+- save its own selections
+- clear its own selections
+- saves it own marker (x o)

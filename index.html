@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+    <!-- <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Tic Tac Toe Game</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <div class="menu">
+          <button id="reset-btn" class="fas fa-sync-alt"></button>
+          <button id="settings-btn" class="fas fa-cog"></button>
+        </div>
+
+        <div class="game-stats">
+          <p class="">SCORE</p>
+          <ul>
+            <li class="stat">
+              <i class="far fa-circle"></i>
+              <p id="p1-score">4 wins</p>
+            </li>
+            <li class="stat">
+              <i class="fas fa-times"></i>
+              <p id="p2-score">4 wins</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="game-board">
+          <div class="game-board-item" data-item-number="1">
+            <!-- player marker item goes here -->
+            <i class="fas fa-times"></i>
+          </div>
+          <div class="game-board-item v-lining" data-item-number="2">
+            <!-- player marker item goes here -->
+            <i class="fas fa-times"></i>
+          </div>
+          <div class="game-board-item" data-item-number="3">
+            <!-- player marker item goes here -->
+            <i class="fas fa-times"></i>
+          </div>
+          <div class="game-board-item h-lining" data-item-number="4">
+            <!-- player marker item goes here -->
+            <i class="fas fa-times"></i>
+          </div>
+          <div class="game-board-item h-lining v-lining" data-item-number="5">
+            <!-- player marker item goes here -->
+            <i class="fas fa-times"></i>
+          </div>
+          <div class="game-board-item h-lining" data-item-number="6">
+            <!-- player marker item goes here -->
+            <i class="fas fa-times"></i>
+          </div>
+          <div class="game-board-item" data-item-number="7">
+            <!-- player marker item goes here -->
+            <i class="fas fa-times"></i>
+          </div>
+          <div class="game-board-item v-lining" data-item-number="8">
+            <!-- player marker item goes here -->
+            <i class="fas fa-times"></i>
+          </div>
+          <div class="game-board-item" data-item-number="9">
+            <!-- player marker item goes here -->
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+        <div class="banner">
+          <p class="banner-text">Player 1's Turn</p>
+          <p id="marker" class="far fa-circle"></p>
+        </div>
+      </div>
+
+      <div class="settings">
+        <button id="close-btn" class="fas fa-times"></button>
+        <div class="gridui">
+          <input type="text" name="" id="p1-name" value="Player 1" />
+          <i class="far fa-circle" id="p1-marker"></i>
+          <input type="text" name="" id="p2-name" value="Player 2" />
+          <i class="fas fa-times" id="p2-marker"></i>
+          <button id="save">Save</button>
+        </di>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script src="js/index.js"></script>
+  </body>
+</html>
